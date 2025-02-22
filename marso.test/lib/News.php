@@ -8,9 +8,9 @@ class News {
         $class = \Bitrix\Iblock\Iblock::wakeUp($iblock)->getEntityDataClass();
 
         if (!empty($class)) {
-            $filter = [
-                'ACTIVE' => 'Y',
-            ];
+
+            $filter["ACTIVE"] = "Y";
+            
             if (!empty($code)) {
                 $filter["CODE"] = $code;
             }
